@@ -258,16 +258,38 @@ nav {
 
 .modal__lanuage {
     width: 25%;
-    padding: 16px
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.language__name {
+    position: absolute;
+    bottom: -10px;
 }
 
 .modal__language--img {
-    width: 20%;
+    width: 75px;
 }
 
 .modal__contact {
     background-color: #242424;
     color: white;
+}
+
+.modal__title {
+    font-size: 26px;
+}
+
+.modal__sub-title {
+    margin: 12px 0 24px 0;
+}
+
+.modal__para {
+    margin-bottom: 16px;
+    line-height: 1.75;
 }
 
 

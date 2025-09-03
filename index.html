@@ -84,7 +84,7 @@
         <div class="modal__half modal__about">
             <h3 class="modal__title modal__title--about">Here's a little about me.</h3>
             <h4 class="modal__sub-title modal__sub-title--about"></h4>
-            <p class="modal__para">I'm a <b class="blue">digital analytics</b> and <b class="blue">technical SEO</b> professional with more than 15 years of experience in ecommerce.
+            <p class="modal__para">I'm a <b class="blue">digital analytics</b> and <b class="blue">technical SEO</b> professional with 15 years of experience in ecommerce.
                 <br>
                 I'm looking to expand my skillset to <b class="blue">front end development</b> and help organizations build wonderful web experiences.
             </p>
@@ -123,7 +123,38 @@
                 </figure>
             </div>
         </div>
-        <div class="modal__half modal__contact">Let's chat</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            Let's have a chat!  I'm open to new opportunities.
+          </h4>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" type="text" name="user_name" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" type="text" name="user_email" required></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" type="text" name="message" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you for the message.  Looking forward to speaking to you soon!
+          </div>
+          </div>
+          <i class="fas fa-times modal__exit click"></i>
     </div>
     </section>
     <section id="projects">

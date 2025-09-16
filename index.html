@@ -39,7 +39,6 @@
               >About</a
             >
           </li>
-
           <li class="nav__link">
             <a
               href="#"
@@ -48,15 +47,14 @@
             >
           </li>
 
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -73,7 +71,7 @@
             I'm a seasoned <b class="blue">analytics and technical SEO professional</b> who is looking
             to transition to Frontend development. 
           <br>
-          Here's a bit <b class="blue">about me</b>.
+          Here's a bit <b class="blue" onclick="toggleModal()">about me</b>.
           </p>
           <div class="social__list">
             <a href="https://www.linkedin.com/in/loganhuss" target="_blank" class="social__link click">
@@ -86,16 +84,16 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
-      <a href="#projects" class="scroll"><div class="scroll__icon click"></div> sfff 
+      <a href="#projects" class="scroll"><div class="scroll__icon click"></div>
     </a>
     <div class="modal">
         <div class="modal__half modal__about">
             <h3 class="modal__title modal__title--about">Here's a little about me.</h3>
             <h4 class="modal__sub-title modal__sub-title--about"></h4>
-            <p class="modal__para">I'm a <b class="blue">digital analytics</b> and <b class="blue">technical SEO</b> professional with 15 years of experience in ecommerce.
+            <p class="modal__para">I'm a <b class="blue" onclick="toggleModal()">digital analytics</b> and <b class="blue">technical SEO</b> professional with 15 years of experience in ecommerce.
                 <br>
                 I'm looking to expand my skillset to <b class="blue">front end development</b> and help organizations build wonderful web experiences.
             </p>
@@ -135,6 +133,7 @@
             </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">
             Let's have a chat!
           </h3>
@@ -165,7 +164,6 @@
             Thank you for the message.  Looking forward to speaking to you soon!
           </div>
           </div>
-          <i class="fas fa-times modal__exit click"></i>
     </div>
     </section>
     <section id="projects">

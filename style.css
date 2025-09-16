@@ -129,6 +129,43 @@ input:focus, textarea:focus {
     width: 100%;
 }
 
+nav, .scroll, .header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+.modal--open nav, .modal--open .scroll, .modal--open .header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
+.dark-theme .title, 
+.dakr-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para
+{
+    color: white
+}
+
+.dark-theme section {
+    background-color: black;
+}
+
+.dark-theme #personal-logo {
+    filter: none;
+}
+
+.dark-theme .scroll__icon {
+    border-color: white;
+}
+
+.dark-theme .scroll__icon:after {
+    border-color: white;
+}
+
 /* Landing */
 
 #landing-page {
@@ -267,10 +304,18 @@ nav {
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+    z-index: -1;
+}
+
+.modal--open .modal {
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    z-index: 60;
+    visibility: visible;
 }
 
 .modal__half {
@@ -280,10 +325,16 @@ nav {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about, .modal--open .modal__contact {
+    transform: translateX(0%);
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
+    transform: translateX(-110%);
 }
 
 .modal__languages {
@@ -324,6 +375,7 @@ nav {
 .modal__contact {
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
 }
 
 .modal__title {
@@ -372,7 +424,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -393,6 +445,7 @@ nav {
 
 .modal__overlay--visible {
     z-index: 1;
+    display: flex;
 }
 
 .modal__exit {
